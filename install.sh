@@ -85,6 +85,11 @@ echo -n "Downloading Configuration Builder: "
 wget --quiet https://raw.githubusercontent.com/Obigeek/YOWSUP_Installer/master/conf_builder.py
 echo -e "${GREEN}[Complete]${NC}"
 
+echo -n "Downloading Latest APK: "
+latest_apk=$(python link_builder.py 2>&1)
+wget --quiet $latest_apk
+echo -e "${GREEN}[Complete]${NC}"
+
 echo -n "Getting Version: "
 version=$(python version_helper.py WhatsApp.apk 2>&1)
 echo -e "${ORANGE}$version${NC}"
