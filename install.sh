@@ -150,12 +150,12 @@ if [[ $configure =~ [Yy]$ ]]; then
   read mnc
   echo
   echo -n "Sending Request: "
-  yowsup-cli registration --requestcode sms --phone $cc$phone --cc $cc --mcc $mcc --mnc $mnc -E andriod
+  yowsup-cli registration --requestcode sms --phone $cc$phone --cc $cc --mcc $mcc --mnc $mnc -E android
   echo -e "${GREEN}[Sent]${NC}"
   echo
   echo -n "Please enter your verification code: "
   read ver_code
-  yowsup-cli registration --register $ver_code --phone $cc$phone --cc $cc -E andriod > config
+  yowsup-cli registration --register $ver_code --phone $cc$phone --cc $cc -E android > config
 
   printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
   echo -e "${GREEN}YOWSUP 2 Registration Complete${NC}"
