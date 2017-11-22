@@ -101,12 +101,12 @@ echo -e "${ORANGE}$MD5${NC}"
 cd yowsup/yowsup/env/
 
 echo -n "Modifying Configuration File: "
-python conf_builder.py $version $MD5
+python ../../../conf_builder.py $version $MD5
 echo -e "${GREEN}[Complete]${NC}"
 
 echo -n "Deleting Old Configuration File: "
-rm env_andriod.py
-mv env_andriod_new.py env_andriod.py
+rm env_android.py
+mv env_android_new.py env_android.py
 cd ../../
 echo -e "${GREEN}[Complete]${NC}"
 
